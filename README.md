@@ -1,4 +1,4 @@
-# Whalebone QA Assignment
+# QA Assignment
 
 Automated test suite covering REST API testing and UI browser testing, built with Java 21, TestNG, RestAssured, and Playwright.
 
