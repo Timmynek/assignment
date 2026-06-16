@@ -15,6 +15,7 @@ import io.restassured.response.Response;
 public class TeamsApiTest {
 
     private static final String BASE_URL = "https://qa-assignment.dev1.whalebone.io/api/teams";
+    private static final int EXPECTED_TEAM_COUNT = 32;
 
     @BeforeClass
     public void setup() {
@@ -28,7 +29,7 @@ public class TeamsApiTest {
         assertEquals(response.getStatusCode(), 200);
 
         int teamCount = response.jsonPath().getList("teams").size();
-        assertEquals(teamCount, 32, "Expected 32 teams in total");
+        assertEquals(teamCount, EXPECTED_TEAM_COUNT, "Expected " + EXPECTED_TEAM_COUNT + " teams in total");
     }
 
     @Test
